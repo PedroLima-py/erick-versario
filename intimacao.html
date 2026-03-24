@@ -30,59 +30,9 @@
             background-image: linear-gradient(to bottom, #fff8ed, #fef0df);
             border-radius: 8px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
-            padding: 80px 20px 24px 20px;
+            padding: 24px 20px;
             position: relative;
             z-index: 10;
-        }
-
-        .selo {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 65px;
-            height: 65px;
-            border: 2px double #9b7e3a;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #f7ebd0;
-            opacity: 0.95;
-            text-align: center;
-            padding: 6px 3px;
-            box-sizing: border-box;
-            z-index: 5;
-        }
-
-        .selo .linha1 {
-            font-size: 9px;
-            font-weight: 900;
-            letter-spacing: 0.5px;
-            color: #9b7e3a;
-            text-transform: uppercase;
-            line-height: 1.2;
-            margin-bottom: 1px;
-        }
-
-        .selo .linha2 {
-            font-size: 6.5px;
-            font-weight: bold;
-            color: #9b7e3a;
-            text-transform: uppercase;
-            line-height: 1.2;
-            margin-bottom: 1px;
-        }
-
-        .selo .linha3 {
-            font-size: 5.5px;
-            font-weight: bold;
-            color: #9b7e3a;
-            text-transform: uppercase;
-            border-top: 1px solid #b88b4a;
-            padding-top: 2px;
-            margin-top: 1px;
-            line-height: 1.1;
         }
 
         .brasao {
@@ -374,23 +324,7 @@
             }
             .documento {
                 max-width: 900px;
-                padding: 100px 56px 48px 56px;
-            }
-            .selo {
-                width: 100px;
-                height: 100px;
-                top: 32px;
-                right: 48px;
-                padding: 12px 4px;
-            }
-            .selo .linha1 {
-                font-size: 13px;
-            }
-            .selo .linha2 {
-                font-size: 9px;
-            }
-            .selo .linha3 {
-                font-size: 8px;
+                padding: 48px 56px;
             }
             .brasao h1 {
                 font-size: 22px;
@@ -422,12 +356,6 @@
     <canvas id="confeteCanvas"></canvas>
 
     <div class="documento">
-        <div class="selo">
-            <div class="linha1">TEMPLÁRIOS</div>
-            <div class="linha2">ORDEM DOS</div>
-            <div class="linha3">DEFENSORES DA LEI</div>
-        </div>
-
         <div class="brasao">
             <h1>TRIBUNAL DIGITAL DA SANTA INFÂNCIA</h1>
             <p>Sob a égide da Lei Felca • Custódia da Ordem dos Templários</p>
@@ -605,7 +533,7 @@
 
         btnFinalizar.addEventListener('click', () => {
             if (check1.checked && check2.checked && check3.checked && check4.checked) {
-                parabensMsg.innerHTML = 'PARABÉNS PRA VOCÊ, NESTA DATA QUERIDA<br>VIOLOU A LEI FELCA, AGORA É ZOEIRA NA SUA VIDA!<br><br>ERICK GUSTAVO ALVES DE SOUZA, VOCÊ FOI PEGO NO FLAGRANTE DA ADULTIZAÇÃO E BULLYING LÚDICO.<br>QUE A ORDEM DOS TEMPLÁRIOS TENHA MISERICÓRDIA DA SUA ALMA DIGITAL.';
+                parabensMsg.innerHTML = 'PARABÉNS PRA VOCÊ, NESTA DATA QUERIDA<br>VIOLOU A LEI FELCA, AGORA É PROIBIÇÃO NA SUA VIDA!<br><br>ERICK GUSTAVO ALVES DE SOUZA, VOCÊ FOI PEGO NO FLAGRANTE DA ADULTIZAÇÃO E BULLYING LÚDICO.<br>TENHA MISERICÓRDIA DA SUA ALMA.';
                 parabensMsg.style.display = 'block';
                 
                 setTimeout(() => {
