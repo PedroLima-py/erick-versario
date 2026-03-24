@@ -29,7 +29,7 @@
             background-image: linear-gradient(to bottom, #fff8ed, #fef0df);
             border-radius: 8px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
-            padding: 24px 20px;
+            padding: 80px 20px 24px 20px;
             position: relative;
         }
 
@@ -37,8 +37,8 @@
             position: absolute;
             top: 16px;
             right: 16px;
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             border: 2px double #9b7e3a;
             border-radius: 50%;
             display: flex;
@@ -46,40 +46,41 @@
             align-items: center;
             justify-content: center;
             background: #f7ebd0;
-            opacity: 0.9;
+            opacity: 0.95;
             text-align: center;
-            padding: 8px 4px;
+            padding: 6px 3px;
             box-sizing: border-box;
+            z-index: 5;
         }
 
         .selo .linha1 {
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 900;
             letter-spacing: 0.5px;
             color: #9b7e3a;
             text-transform: uppercase;
             line-height: 1.2;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .selo .linha2 {
-            font-size: 7px;
+            font-size: 6.5px;
             font-weight: bold;
             color: #9b7e3a;
             text-transform: uppercase;
             line-height: 1.2;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .selo .linha3 {
-            font-size: 6px;
+            font-size: 5.5px;
             font-weight: bold;
             color: #9b7e3a;
             text-transform: uppercase;
             border-top: 1px solid #b88b4a;
-            padding-top: 3px;
-            margin-top: 2px;
-            line-height: 1.2;
+            padding-top: 2px;
+            margin-top: 1px;
+            line-height: 1.1;
         }
 
         .brasao {
@@ -90,71 +91,71 @@
         }
 
         .brasao h1 {
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 1px;
             color: #3e2a1f;
             font-weight: normal;
         }
 
         .brasao p {
-            font-size: 11px;
+            font-size: 10px;
             color: #7a5a3a;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         .titulo-principal {
             text-align: center;
-            margin: 24px 0 20px;
+            margin: 20px 0 16px;
         }
 
         .titulo-principal h2 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             text-transform: uppercase;
             color: #2c1a0c;
             border-bottom: 1px solid #b59d6e;
             display: inline-block;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
         }
 
         .titulo-principal .sub {
-            font-size: 11px;
-            margin-top: 8px;
+            font-size: 10px;
+            margin-top: 6px;
             color: #5e3a22;
         }
 
         .corpo-texto {
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.5;
             color: #1e1a14;
             text-align: justify;
         }
 
         .corpo-texto p {
-            margin: 1em 0;
+            margin: 0.9em 0;
         }
 
         .destaque-lei {
             background: #f3efdf;
             border-left: 3px solid #b37b2e;
-            padding: 12px 16px;
-            margin: 16px 0;
+            padding: 10px 14px;
+            margin: 14px 0;
             font-family: monospace;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .assinatura-area {
-            margin-top: 32px;
+            margin-top: 28px;
             text-align: center;
             border-top: 1px dashed #bbaa82;
-            padding-top: 20px;
+            padding-top: 18px;
         }
 
         .btn-proximo {
             background: none;
             border: 2px solid #7c5f36;
-            padding: 14px 28px;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 15px;
             font-family: 'Times New Roman', serif;
             font-weight: bold;
             color: #7c5f36;
@@ -164,7 +165,7 @@
             text-decoration: none;
             display: inline-block;
             width: 100%;
-            max-width: 280px;
+            max-width: 260px;
             text-align: center;
             border-radius: 4px;
         }
@@ -177,8 +178,8 @@
 
         footer {
             text-align: center;
-            margin-top: 32px;
-            font-size: 10px;
+            margin-top: 28px;
+            font-size: 9px;
             color: #ac9a76;
         }
 
@@ -188,12 +189,12 @@
             }
             .documento {
                 max-width: 900px;
-                padding: 48px 56px;
+                padding: 100px 56px 48px 56px;
             }
             .selo {
                 width: 100px;
                 height: 100px;
-                top: 40px;
+                top: 32px;
                 right: 48px;
                 padding: 12px 4px;
             }
@@ -209,8 +210,14 @@
             .brasao h1 {
                 font-size: 22px;
             }
+            .brasao p {
+                font-size: 14px;
+            }
             .titulo-principal h2 {
                 font-size: 28px;
+            }
+            .corpo-texto {
+                font-size: 16px;
             }
             .btn-proximo {
                 width: auto;
