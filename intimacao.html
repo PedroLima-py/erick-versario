@@ -2,19 +2,20 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Intimação - Processo nº 2026.00012-ERICK/FC</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background: #1e2a1f;
             font-family: 'Times New Roman', 'Georgia', serif;
-            padding: 40px 20px;
+            padding: 20px 16px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,23 +24,24 @@
         }
 
         .documento {
-            max-width: 900px;
+            max-width: 100%;
+            width: 100%;
             background: #fef5e6;
             background-image: linear-gradient(to bottom, #fff8ed, #fef0df);
-            border-radius: 4px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
-            padding: 48px 56px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
+            padding: 24px 20px;
             position: relative;
             z-index: 10;
         }
 
         .selo {
             position: absolute;
-            top: 40px;
-            right: 48px;
-            width: 100px;
-            height: 100px;
-            border: 3px double #9b7e3a;
+            top: 16px;
+            right: 16px;
+            width: 70px;
+            height: 70px;
+            border: 2px double #9b7e3a;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
@@ -48,14 +50,14 @@
             background: #f7ebd0;
             opacity: 0.9;
             text-align: center;
-            padding: 12px 4px;
+            padding: 8px 4px;
             box-sizing: border-box;
         }
 
         .selo .linha1 {
-            font-size: 13px;
+            font-size: 10px;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             color: #9b7e3a;
             text-transform: uppercase;
             line-height: 1.2;
@@ -63,7 +65,7 @@
         }
 
         .selo .linha2 {
-            font-size: 9px;
+            font-size: 7px;
             font-weight: bold;
             color: #9b7e3a;
             text-transform: uppercase;
@@ -72,92 +74,94 @@
         }
 
         .selo .linha3 {
-            font-size: 8px;
+            font-size: 6px;
             font-weight: bold;
             color: #9b7e3a;
             text-transform: uppercase;
             border-top: 1px solid #b88b4a;
-            padding-top: 4px;
+            padding-top: 3px;
             margin-top: 2px;
             line-height: 1.2;
         }
 
         .brasao {
             text-align: center;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             border-bottom: 2px solid #c8b27a;
-            padding-bottom: 20px;
+            padding-bottom: 16px;
         }
 
         .brasao h1 {
-            font-size: 22px;
-            letter-spacing: 2px;
+            font-size: 18px;
+            letter-spacing: 1px;
             color: #3e2a1f;
             font-weight: normal;
         }
 
         .brasao p {
-            font-size: 14px;
+            font-size: 11px;
             color: #7a5a3a;
+            margin-top: 6px;
         }
 
         .titulo-principal {
             text-align: center;
-            margin: 32px 0 24px;
+            margin: 24px 0 20px;
         }
 
         .titulo-principal h2 {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
             color: #2c1a0c;
             border-bottom: 1px solid #b59d6e;
             display: inline-block;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         .titulo-principal .sub {
-            font-size: 14px;
-            margin-top: 10px;
+            font-size: 10px;
+            margin-top: 8px;
             color: #5e3a22;
         }
 
         .corpo-texto {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.5;
             color: #1e1a14;
             text-align: justify;
         }
 
         .corpo-texto p {
-            margin: 1.2em 0;
+            margin: 1em 0;
         }
 
         .dados-reu {
             background: #f3efdf;
             border: 1px solid #d4c28c;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 16px;
+            margin: 16px 0;
             font-family: monospace;
+            font-size: 13px;
         }
 
         .dados-reu h3 {
             color: #8b3c1c;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-family: 'Times New Roman', serif;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .dados-reu p {
-            margin: 6px 0;
+            margin: 4px 0;
         }
 
         .autoridades {
             background: #e8e0cf;
             border: 1px solid #c2af7a;
-            padding: 16px;
-            margin: 20px 0;
-            font-size: 14px;
+            padding: 12px;
+            margin: 16px 0;
+            font-size: 12px;
             text-align: center;
         }
 
@@ -168,8 +172,8 @@
 
         .acusacoes {
             background: #fff1e0;
-            padding: 18px 24px;
-            margin: 24px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
             border: 1px solid #e0cfb0;
         }
 
@@ -177,7 +181,7 @@
             color: #a12f2f;
             font-weight: bold;
             margin-bottom: 12px;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .acusacoes ul {
@@ -187,14 +191,9 @@
 
         .acusacoes li {
             margin-bottom: 14px;
-            padding-left: 24px;
+            padding-left: 0;
             position: relative;
-        }
-
-        .acusacoes li::before {
-            content: "";
-            position: absolute;
-            left: 0;
+            font-size: 13px;
         }
 
         .artigo {
@@ -203,26 +202,26 @@
         }
 
         .foto-prova {
-            margin: 32px 0;
+            margin: 24px 0;
             text-align: center;
             border: 2px solid #c2b28b;
             background: #f5ede0;
-            padding: 20px;
+            padding: 16px;
         }
 
         .foto-prova h3 {
             color: #5e3a22;
-            margin-bottom: 16px;
-            font-size: 18px;
+            margin-bottom: 12px;
+            font-size: 16px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .foto-placeholder {
             background: #d9cdb0;
             width: 100%;
-            max-width: 400px;
-            height: 300px;
+            max-width: 280px;
+            height: 200px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -231,58 +230,57 @@
             border: 1px dashed #8b5a2b;
             color: #6a4c2c;
             font-family: monospace;
-        }
-
-        .foto-placeholder .icone-camera {
-            font-size: 48px;
-            margin-bottom: 12px;
+            font-size: 12px;
         }
 
         .foto-real {
             max-width: 100%;
-            max-height: 300px;
+            max-height: 220px;
             border: 1px solid #b59d6e;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .multa {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             text-align: center;
             background: #e8dccc;
-            padding: 16px;
-            margin: 24px 0;
-            border-radius: 30px;
+            padding: 14px;
+            margin: 20px 0;
+            border-radius: 24px;
             color: #2d2418;
         }
 
         .sentenca {
-            margin: 32px 0;
+            margin: 24px 0;
             text-align: center;
         }
 
         .btn-cumprir {
             background: #7c5f36;
             border: none;
-            padding: 14px 36px;
-            font-size: 18px;
+            padding: 14px 24px;
+            font-size: 16px;
             font-family: 'Times New Roman', serif;
             font-weight: bold;
             color: #fef3e2;
             cursor: pointer;
             transition: 0.2s;
-            margin-top: 16px;
+            width: 100%;
+            max-width: 320px;
+            border-radius: 4px;
         }
 
-        .btn-cumprir:hover {
+        .btn-cumprir:active {
             background: #5a421f;
+            transform: scale(0.98);
         }
 
         .absolute-cinema {
-            margin-top: 48px;
+            margin-top: 32px;
             text-align: center;
             border-top: 2px solid #c2b28b;
-            padding-top: 32px;
+            padding-top: 24px;
             position: relative;
             z-index: 15;
         }
@@ -290,30 +288,73 @@
         .absolute-cinema img {
             max-width: 100%;
             border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             border: 2px solid #b59d6e;
             cursor: pointer;
         }
 
         .absolute-cinema p {
-            margin-top: 12px;
-            font-size: 14px;
+            margin-top: 10px;
+            font-size: 12px;
             font-style: italic;
             color: #7a5a3a;
         }
 
         .assinatura-area {
-            margin-top: 32px;
+            margin-top: 24px;
             text-align: center;
             border-top: 1px dashed #bbaa82;
-            padding-top: 24px;
+            padding-top: 20px;
+            font-size: 11px;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 11px;
+            margin-top: 28px;
+            font-size: 9px;
             color: #ac9a76;
+        }
+
+        #termoArea {
+            margin-top: 20px;
+            background: #f3efdf;
+            padding: 16px;
+            border: 1px solid #b59d6e;
+        }
+
+        #termoArea h3 {
+            color: #6b2e1a;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        #termoArea label {
+            display: block;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+
+        #termoArea input {
+            margin-right: 8px;
+            transform: scale(1.1);
+        }
+
+        #btnFinalizar {
+            margin-top: 16px;
+            background: #7c5f36;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 280px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        #btnFinalizar:active {
+            background: #5a421f;
+            transform: scale(0.98);
         }
 
         #confeteCanvas {
@@ -326,25 +367,49 @@
             z-index: 9999;
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
             .documento {
-                padding: 28px 20px;
+                max-width: 900px;
+                padding: 48px 56px;
             }
             .selo {
-                width: 70px;
-                height: 70px;
-                top: 20px;
-                right: 20px;
-                padding: 8px 2px;
+                width: 100px;
+                height: 100px;
+                top: 40px;
+                right: 48px;
+                padding: 12px 4px;
             }
             .selo .linha1 {
-                font-size: 10px;
+                font-size: 13px;
             }
             .selo .linha2 {
-                font-size: 7px;
+                font-size: 9px;
             }
             .selo .linha3 {
-                font-size: 6px;
+                font-size: 8px;
+            }
+            .brasao h1 {
+                font-size: 22px;
+            }
+            .titulo-principal h2 {
+                font-size: 28px;
+            }
+            .corpo-texto {
+                font-size: 16px;
+            }
+            .acusacoes li {
+                font-size: 15px;
+            }
+            .multa {
+                font-size: 20px;
+            }
+            .btn-cumprir {
+                width: auto;
+                padding: 14px 36px;
+                font-size: 18px;
             }
         }
     </style>
@@ -382,65 +447,56 @@
                 <p>JULGAMENTO CONSTITUÍDO PELA ORDEM DOS TEMPLÁRIOS</p>
                 <p><span>Juiz:</span> Diogo da Luz Sacra • <span>Notários:</span> Emanuel Escrivão e Pedro Registrador</p>
                 <p><span>Testemunha de acusação:</span> Jonathan Observador • <span>Criminoso colaborador:</span> Pedro Yan (herege arrependido)</p>
-                <p style="font-size:12px; margin-top:8px;">Tribunal instituído sob a bula "In Caelo Digitalis" — Ano da Graça de 2026</p>
+                <p style="font-size:10px; margin-top:6px;">Tribunal instituído sob a bula "In Caelo Digitalis" — Ano da Graça de 2026</p>
             </div>
 
             <div class="acusacoes">
                 <h3>ACUSAÇÕES FORMALIZADAS</h3>
                 <ul>
-                    <li><span class="artigo">Art. 7º, inc. II do Código Templário:</span> Acusado de ser <strong>herege</strong> — praticar atos de heresia etária contra a Santa Mãe Igreja, questionando publicamente a imutabilidade dos dogmas perante a Ordem.</li>
-                    <li><span class="artigo">Art. 14, § 3º do Código Tributário Digital:</span> Acusado de <strong>não pagar IPTU</strong>, acumulando débitos fiscais em território jurisdicional deste tribunal.</li>
-                    <li><span class="artigo">Art. 22, caput da Lei Felca:</span> Acusado de <strong>protestar contra a Lei Felca no Roblox</strong>, organizando manifestação virtual com avatares sem autorização do responsável legal.</li>
-                    <li><span class="artigo">Art. 4º, inc. I da Lei Felca:</span> Acusado de <strong>ficar mais velho</strong> — tentativa consumada de adultização precoce, com flagrante de envelhecimento não autorizado.</li>
-                    <li><span class="artigo">Art. 31, inc. III do Código de Conduta Lúdica:</span> Acusado de <strong>realizar bullying contra Jonathan no jogo Codenames</strong>, utilizando pistas vexatórias e conduta antidesportiva durante partida oficialmente registrada.</li>
+                    <li><span class="artigo">Art. 7º, inc. II do Código Templário:</span> Acusado de ser <strong>herege</strong> — praticar atos de heresia etária contra a Santa Mãe Igreja.</li>
+                    <li><span class="artigo">Art. 14, § 3º do Código Tributário Digital:</span> Acusado de <strong>não pagar IPTU</strong>, acumulando débitos fiscais em território jurisdicional.</li>
+                    <li><span class="artigo">Art. 22, caput da Lei Felca:</span> Acusado de <strong>protestar contra a Lei Felca no Roblox</strong>, organizando manifestação virtual com avatares.</li>
+                    <li><span class="artigo">Art. 4º, inc. I da Lei Felca:</span> Acusado de <strong>ficar mais velho</strong> — tentativa consumada de adultização precoce.</li>
+                    <li><span class="artigo">Art. 31, inc. III do Código de Conduta Lúdica:</span> Acusado de <strong>realizar bullying contra Jonathan no jogo Codenames</strong>, utilizando pistas vexatórias.</li>
                 </ul>
             </div>
 
             <div class="foto-prova">
                 <h3>PROVA ANEXADA AOS AUTOS</h3>
                 <div id="containerFoto">
-                    <img src="/assets/foto-prova.jpg" alt="Foto do acusado em flagrante" class="foto-real" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'foto-placeholder\'><div class=\'icone-camera\'>[FOTO]</div><div class=\'caminho\'>/assets/foto-prova.jpg</div><div style=\'margin-top:12px;font-size:13px;\'>aguardando anexo da prova flagrante do acusado — registro obtido pelos Templários</div></div>';">
+                    <img src="/assets/foto-prova.jpg" alt="Foto do acusado em flagrante" class="foto-real" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'foto-placeholder\'><div>[FOTO]</div><div style=\'font-size:10px;margin-top:8px;\'>/assets/foto-prova.jpg</div><div style=\'margin-top:8px;\'>aguardando anexo da prova flagrante</div></div>';">
                 </div>
-                <p style="font-size:12px; margin-top:8px; color:#7a5a3a;">Registro oficial obtido pela inteligência da Ordem dos Templários — flagrante de heresia etária e bullying lúdico</p>
+                <p style="font-size:10px; margin-top:8px; color:#7a5a3a;">Registro obtido pela Ordem dos Templários — flagrante de heresia etária e bullying lúdico</p>
             </div>
 
             <div class="multa">
-                PENA PROPOSTA PELO JUÍZO: 1 (um) bolo de chocolate com cobertura + 3 (três) constrangimentos públicos + pagamento do IPTU atrasado + jogar um UNO com a rapaziada sob supervisão da Ordem + pedir desculpas formalmente a Jonathan por escrito
+                PENA PROPOSTA: 1 bolo de chocolate com cobertura + 3 constrangimentos públicos + pagamento do IPTU atrasado + jogar UNO com a rapaziada + pedir desculpas formalmente a Jonathan
             </div>
 
             <div class="sentenca">
                 <button class="btn-cumprir" id="btnCumprirSentenca">CUMPRIR SENTENÇA E CANTAR PARABÉNS</button>
             </div>
 
-            <div id="termoArea" style="display: none; margin-top: 24px; background: #f3efdf; padding: 20px; border: 1px solid #b59d6e;">
-                <h3 style="color:#6b2e1a;">TERMO DE CUMPRIMENTO PERANTE OS TEMPLÁRIOS</h3>
+            <div id="termoArea" style="display: none;">
+                <h3>TERMO DE CUMPRIMENTO PERANTE OS TEMPLÁRIOS</h3>
                 <p>O réu <strong>ERICK GUSTAVO ALVES DE SOUZA</strong> declara sob as penas da Lei Felca e da Ordem:</p>
-                <label style="display: block; margin: 12px 0;">
-                    <input type="checkbox" id="check1"> Reconheço que estou ficando mais velho e que a Lei Felca me pegou em flagrante.
-                </label>
-                <label style="display: block; margin: 12px 0;">
-                    <input type="checkbox" id="check2"> Autorizo a execução do parabéns constrangedor em via pública (WhatsApp e demais canais).
-                </label>
-                <label style="display: block; margin: 12px 0;">
-                    <input type="checkbox" id="check3"> Confesso que sou herege e devo IPTU simbólico à Vara Digital.
-                </label>
-                <label style="display: block; margin: 12px 0;">
-                    <input type="checkbox" id="check4"> Reconheço a prática de bullying contra Jonathan no jogo Codenames e comprometo-me a pedir desculpas formais.
-                </label>
-                <button id="btnFinalizar" style="margin-top: 16px; background: #7c5f36; color: white; border: none; padding: 10px 24px; cursor: pointer;">FINALIZAR E CANTAR PARABÉNS</button>
-                <div id="parabensMsg" style="margin-top: 20px; font-weight: bold; text-align: center; display: none;"></div>
+                <label><input type="checkbox" id="check1"> Reconheço que estou ficando mais velho e que a Lei Felca me pegou em flagrante.</label>
+                <label><input type="checkbox" id="check2"> Autorizo a execução do parabéns constrangedor em via pública (WhatsApp e demais canais).</label>
+                <label><input type="checkbox" id="check3"> Confesso que sou herege e devo IPTU simbólico à Vara Digital.</label>
+                <label><input type="checkbox" id="check4"> Reconheço a prática de bullying contra Jonathan no jogo Codenames e comprometo-me a pedir desculpas formais.</label>
+                <button id="btnFinalizar">FINALIZAR E CANTAR PARABÉNS</button>
+                <div id="parabensMsg" style="margin-top: 16px; font-weight: bold; text-align: center; display: none;"></div>
             </div>
 
             <div class="absolute-cinema" id="cinemaArea" style="display: none;">
-                <img src="https://preview.redd.it/tem-uma-pergunta-na-sua-opini%C3%A3o-qual-filmes-s%C3%A9ries-%C3%A9-v0-cy5sc6019b6f1.jpeg?width=640&crop=smart&auto=webp&s=67c2eb0a711691a3116441d6166bc57927ccef21" alt="Absolute Cinema" id="cinemaImg">
+                <img src="https://preview.redd.it/tem-uma-pergunta-na-sua-opini%C3%A3o-qual-filmes-s%C3%A9ries-%C3%A9-v0-cy5sc6019b6f1.jpeg?width=640&crop=smart&auto=webp&s=67c2eb0a711691a3116441d6166bc57927ccef21" alt="Absolute Cinema">
                 <p>ABSOLUTE CINEMA — Este processo foi julgado com excelência pela Ordem dos Templários</p>
             </div>
         </div>
 
         <div class="assinatura-area">
             <p>Juiz Diogo da Luz Sacra • Notários Emanuel e Pedro</p>
-            <p style="font-size:12px;">Testemunha: Jonathan Observador • Colaborador: Pedro Yan (herege arrependido)</p>
-            <p style="font-size:12px;">Processo assinado digitalmente — Este documento tem força de zoeira em todo território nacional</p>
+            <p style="font-size:10px;">Testemunha: Jonathan Observador • Colaborador: Pedro Yan (herege arrependido)</p>
         </div>
         <footer>Ordem dos Templários • Defensores da Lei Felca e da Santa Infância Digital</footer>
     </div>
@@ -476,12 +532,12 @@
                 return {
                     x: Math.random() * canvas.width,
                     y: -20,
-                    size: Math.random() * 10 + 5,
-                    speedY: Math.random() * 5 + 3,
-                    speedX: (Math.random() - 0.5) * 2,
+                    size: Math.random() * 8 + 4,
+                    speedY: Math.random() * 4 + 2,
+                    speedX: (Math.random() - 0.5) * 1.5,
                     color: `hsl(${Math.random() * 360}, 70%, 60%)`,
                     rotation: Math.random() * 360,
-                    rotationSpeed: (Math.random() - 0.5) * 10
+                    rotationSpeed: (Math.random() - 0.5) * 8
                 };
             }
 
@@ -512,7 +568,7 @@
 
             function iniciar() {
                 resizeCanvas();
-                for (let i = 0; i < 150; i++) {
+                for (let i = 0; i < 100; i++) {
                     confetes.push(criarConfete());
                 }
                 desenhar();
@@ -532,7 +588,7 @@
                 resizeCanvas();
                 if (animationId) {
                     confetes = [];
-                    for (let i = 0; i < 150; i++) {
+                    for (let i = 0; i < 100; i++) {
                         confetes.push(criarConfete());
                     }
                 }
@@ -555,7 +611,7 @@
                     
                     setTimeout(() => {
                         confete.parar();
-                    }, 8000);
+                    }, 6000);
                 }, 500);
             } else {
                 alert('O réu deve aceitar todos os termos antes de cumprir a sentença. A Lei Felca e os Templários não perdoam hereges.');
