@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intimação - Processo nº 2026.00012-ERICK/FC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1e2a1f;
+            font-family: 'Times New Roman', 'Georgia', serif;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .documento {
+            max-width: 900px;
+            background: #fef5e6;
+            background-image: linear-gradient(to bottom, #fff8ed, #fef0df);
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
+            padding: 48px 56px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .selo {
+            position: absolute;
+            top: 40px;
+            right: 48px;
+            width: 100px;
+            height: 100px;
+            border: 3px double #9b7e3a;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f7ebd0;
+            opacity: 0.9;
+            text-align: center;
+            padding: 12px 4px;
+            box-sizing: border-box;
+        }
+
+        .selo .linha1 {
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .selo .linha2 {
+            font-size: 9px;
+            font-weight: bold;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .selo .linha3 {
+            font-size: 8px;
+            font-weight: bold;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            border-top: 1px solid #b88b4a;
+            padding-top: 4px;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        .brasao {
+            text-align: center;
+            margin-bottom: 28px;
+            border-bottom: 2px solid #c8b27a;
+            padding-bottom: 20px;
+        }
+
+        .brasao h1 {
+            font-size: 22px;
+            letter-spacing: 2px;
+            color: #3e2a1f;
+            font-weight: normal;
+        }
+
+        .brasao p {
+            font-size: 14px;
+            color: #7a5a3a;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            margin: 32px 0 24px;
+        }
+
+        .titulo-principal h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2c1a0c;
+            border-bottom: 1px solid #b59d6e;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .titulo-principal .sub {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #5e3a22;
+        }
+
+        .corpo-texto {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1e1a14;
+            text-align: justify;
+        }
+
+        .corpo-texto p {
+            margin: 1.2em 0;
+        }
+
+        .dados-reu {
+            background: #f3efdf;
+            border: 1px solid #d4c28c;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+
+        .dados-reu h3 {
+            color: #8b3c1c;
+            margin-bottom: 12px;
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+        }
+
+        .dados-reu p {
+            margin: 6px 0;
+        }
+
+        .autoridades {
+            background: #e8e0cf;
+            border: 1px solid #c2af7a;
+            padding: 16px;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .autoridades span {
+            font-weight: bold;
+            color: #6b3a1c;
+        }
+
+        .acusacoes {
+            background: #fff1e0;
+            padding: 18px 24px;
+            margin: 24px 0;
+            border: 1px solid #e0cfb0;
+        }
+
+        .acusacoes h3 {
+            color: #a12f2f;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .acusacoes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .acusacoes li {
+            margin-bottom: 14px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .acusacoes li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        .artigo {
+            font-weight: bold;
+            color: #6b2e1a;
+        }
+
+        .foto-prova {
+            margin: 32px 0;
+            text-align: center;
+            border: 2px solid #c2b28b;
+            background: #f5ede0;
+            padding: 20px;
+        }
+
+        .foto-prova h3 {
+            color: #5e3a22;
+            margin-bottom: 16px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .foto-placeholder {
+            background: #d9cdb0;
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #8b5a2b;
+            color: #6a4c2c;
+            font-family: monospace;
+        }
+
+        .foto-placeholder .icone-camera {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .foto-real {
+            max-width: 100%;
+            max-height: 300px;
+            border: 1px solid #b59d6e;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .multa {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            background: #e8dccc;
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 30px;
+            color: #2d2418;
+        }
+
+        .sentenca {
+            margin: 32px 0;
+            text-align: center;
+        }
+
+        .btn-cumprir {
+            background: #7c5f36;
+            border: none;
+            padding: 14px 36px;
+            font-size: 18px;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            color: #fef3e2;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 16px;
+        }
+
+        .btn-cumprir:hover {
+            background: #5a421f;
+        }
+
+        .absolute-cinema {
+            margin-top: 48px;
+            text-align: center;
+            border-top: 2px solid #c2b28b;
+            padding-top: 32px;
+            position: relative;
+            z-index: 15;
+        }
+
+        .absolute-cinema img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            border: 2px solid #b59d6e;
+            cursor: pointer;
+        }
+
+        .absolute-cinema p {
+            margin-top: 12px;
+            font-size: 14px;
+            font-style: italic;
+            color: #7a5a3a;
+        }
+
+        .assinatura-area {
+            margin-top: 32px;
+            text-align: center;
+            border-top: 1px dashed #bbaa82;
+            padding-top: 24px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 11px;
+            color: #ac9a76;
+        }
+
+        #confeteCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        @media (max-width: 600px) {
+            .documento {
+                padding: 28px 20px;
+            }
+            .selo {
+                width: 70px;
+                height: 70px;
+                top: 20px;
+                right: 20px;
+                padding: 8px 2px;
+            }
+            .selo .linha1 {
+                font-size: 10px;
+            }
+            .selo .linha2 {
+                font-size: 7px;
+            }
+            .selo .linha3 {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="confeteCanvas"></canvas>
+
+    <div class="documento">
+        <div class="selo">
+            <div class="linha1">TEMPLÁRIOS</div>
+            <div class="linha2">ORDEM DOS</div>
+            <div class="linha3">DEFENSORES DA LEI</div>
+        </div>
+
+        <div class="brasao">
+            <h1>TRIBUNAL DIGITAL DA SANTA INFÂNCIA</h1>
+            <p>Sob a égide da Lei Felca • Custódia da Ordem dos Templários</p>
+        </div>
+
+        <div class="titulo-principal">
+            <h2>INTIMAÇÃO COMPLETA</h2>
+            <div class="sub">Processo n° 2026.00012-ERICK/FC • Autos em Segredo de Justiça (Zoeira)</div>
+        </div>
+
+        <div class="corpo-texto">
+            <div class="dados-reu">
+                <h3>DADOS DO ACUSADO</h3>
+                <p><strong>Nome:</strong> ERICK GUSTAVO ALVES DE SOUZA</p>
+                <p><strong>Nome Social:</strong> "O Herege do Roblox"</p>
+                <p><strong>Endereço Digital:</strong> Domínio THP • IP 67.242.18.155</p>
+                <p><strong>Data do Fato:</strong> 24/03/2026 (data em que tentou envelhecer clandestinamente)</p>
+            </div>
+
+            <div class="autoridades">
+                <p>JULGAMENTO CONSTITUÍDO PELA ORDEM DOS TEMPLÁRIOS</p>
+                <p><span>Juiz:</span> Diogo da Luz Sacra • <span>Notários:</span> Emanuel Escrivão e Pedro Registrador</p>
+                <p><span>Testemunha de acusação:</span> Jonathan Observador • <span>Criminoso colaborador:</span> Pedro Yan (herege arrependido)</p>
+                <p style="font-size:12px; margin-top:8px;">Tribunal instituído sob a bula "In Caelo Digitalis" — Ano da Graça de 2026</p>
+            </div>
+
+            <div class="acusacoes">
+                <h3>ACUSAÇÕES FORMALIZADAS</h3>
+                <ul>
+                    <li><span class="artigo">Art. 7º, inc. II do Código Templário:</span> Acusado de ser <strong>herege</strong> — praticar atos de heresia etária contra a Santa Mãe Igreja, questionando publicamente a imutabilidade dos dogmas perante a Ordem.</li>
+                    <li><span class="artigo">Art. 14, § 3º do Código Tributário Digital:</span> Acusado de <strong>não pagar IPTU</strong>, acumulando débitos fiscais em território jurisdicional deste tribunal.</li>
+                    <li><span class="artigo">Art. 22, caput da Lei Felca:</span> Acusado de <strong>protestar contra a Lei Felca no Roblox</strong>, organizando manifestação virtual com avatares sem autorização do responsável legal.</li>
+                    <li><span class="artigo">Art. 4º, inc. I da Lei Felca:</span> Acusado de <strong>ficar mais velho</strong> — tentativa consumada de adultização precoce, com flagrante de envelhecimento não autorizado.</li>
+                    <li><span class="artigo">Art. 31, inc. III do Código de Conduta Lúdica:</span> Acusado de <strong>realizar bullying contra Jonathan no jogo Codenames</strong>, utilizando pistas vexatórias e conduta antidesportiva durante partida oficialmente registrada.</li>
+                </ul>
+            </div>
+
+            <div class="foto-prova">
+                <h3>PROVA ANEXADA AOS AUTOS</h3>
+                <div id="containerFoto">
+                    <img src="/assets/foto-prova.jpg" alt="Foto do acusado em flagrante" class="foto-real" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'foto-placeholder\'><div class=\'icone-camera\'>[FOTO]</div><div class=\'caminho\'>/assets/foto-prova.jpg</div><div style=\'margin-top:12px;font-size:13px;\'>aguardando anexo da prova flagrante do acusado — registro obtido pelos Templários</div></div>';">
+                </div>
+                <p style="font-size:12px; margin-top:8px; color:#7a5a3a;">Registro oficial obtido pela inteligência da Ordem dos Templários — flagrante de heresia etária e bullying lúdico</p>
+            </div>
+
+            <div class="multa">
+                PENA PROPOSTA PELO JUÍZO: 1 (um) bolo de chocolate com cobertura + 3 (três) constrangimentos públicos + pagamento do IPTU atrasado + jogar um UNO com a rapaziada sob supervisão da Ordem + pedir desculpas formalmente a Jonathan por escrito
+            </div>
+
+            <div class="sentenca">
+                <button class="btn-cumprir" id="btnCumprirSentenca">CUMPRIR SENTENÇA E CANTAR PARABÉNS</button>
+            </div>
+
+            <div id="termoArea" style="display: none; margin-top: 24px; background: #f3efdf; padding: 20px; border: 1px solid #b59d6e;">
+                <h3 style="color:#6b2e1a;">TERMO DE CUMPRIMENTO PERANTE OS TEMPLÁRIOS</h3>
+                <p>O réu <strong>ERICK GUSTAVO ALVES DE SOUZA</strong> declara sob as penas da Lei Felca e da Ordem:</p>
+                <label style="display: block; margin: 12px 0;">
+                    <input type="checkbox" id="check1"> Reconheço que estou ficando mais velho e que a Lei Felca me pegou em flagrante.
+                </label>
+                <label style="display: block; margin: 12px 0;">
+                    <input type="checkbox" id="check2"> Autorizo a execução do parabéns constrangedor em via pública (WhatsApp e demais canais).
+                </label>
+                <label style="display: block; margin: 12px 0;">
+                    <input type="checkbox" id="check3"> Confesso que sou herege e devo IPTU simbólico à Vara Digital.
+                </label>
+                <label style="display: block; margin: 12px 0;">
+                    <input type="checkbox" id="check4"> Reconheço a prática de bullying contra Jonathan no jogo Codenames e comprometo-me a pedir desculpas formais.
+                </label>
+                <button id="btnFinalizar" style="margin-top: 16px; background: #7c5f36; color: white; border: none; padding: 10px 24px; cursor: pointer;">FINALIZAR E CANTAR PARABÉNS</button>
+                <div id="parabensMsg" style="margin-top: 20px; font-weight: bold; text-align: center; display: none;"></div>
+            </div>
+
+            <div class="absolute-cinema" id="cinemaArea" style="display: none;">
+                <img src="https://preview.redd.it/tem-uma-pergunta-na-sua-opini%C3%A3o-qual-filmes-s%C3%A9ries-%C3%A9-v0-cy5sc6019b6f1.jpeg?width=640&crop=smart&auto=webp&s=67c2eb0a711691a3116441d6166bc57927ccef21" alt="Absolute Cinema" id="cinemaImg">
+                <p>ABSOLUTE CINEMA — Este processo foi julgado com excelência pela Ordem dos Templários</p>
+            </div>
+        </div>
+
+        <div class="assinatura-area">
+            <p>Juiz Diogo da Luz Sacra • Notários Emanuel e Pedro</p>
+            <p style="font-size:12px;">Testemunha: Jonathan Observador • Colaborador: Pedro Yan (herege arrependido)</p>
+            <p style="font-size:12px;">Processo assinado digitalmente — Este documento tem força de zoeira em todo território nacional</p>
+        </div>
+        <footer>Ordem dos Templários • Defensores da Lei Felca e da Santa Infância Digital</footer>
+    </div>
+
+    <script>
+        const btnCumprir = document.getElementById('btnCumprirSentenca');
+        const termoArea = document.getElementById('termoArea');
+        const cinemaArea = document.getElementById('cinemaArea');
+        const btnFinalizar = document.getElementById('btnFinalizar');
+        const check1 = document.getElementById('check1');
+        const check2 = document.getElementById('check2');
+        const check3 = document.getElementById('check3');
+        const check4 = document.getElementById('check4');
+        const parabensMsg = document.getElementById('parabensMsg');
+
+        btnCumprir.addEventListener('click', () => {
+            termoArea.style.display = 'block';
+            btnCumprir.style.display = 'none';
+        });
+
+        function iniciarConfete() {
+            const canvas = document.getElementById('confeteCanvas');
+            const ctx = canvas.getContext('2d');
+            let confetes = [];
+            let animationId = null;
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function criarConfete() {
+                return {
+                    x: Math.random() * canvas.width,
+                    y: -20,
+                    size: Math.random() * 10 + 5,
+                    speedY: Math.random() * 5 + 3,
+                    speedX: (Math.random() - 0.5) * 2,
+                    color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                    rotation: Math.random() * 360,
+                    rotationSpeed: (Math.random() - 0.5) * 10
+                };
+            }
+
+            function desenhar() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                for (let i = 0; i < confetes.length; i++) {
+                    const c = confetes[i];
+                    ctx.save();
+                    ctx.translate(c.x, c.y);
+                    ctx.rotate(c.rotation * Math.PI / 180);
+                    ctx.fillStyle = c.color;
+                    ctx.fillRect(-c.size/2, -c.size/2, c.size, c.size);
+                    ctx.restore();
+                    
+                    c.y += c.speedY;
+                    c.x += c.speedX;
+                    c.rotation += c.rotationSpeed;
+                    
+                    if (c.y > canvas.height + 50 || c.x < -50 || c.x > canvas.width + 50) {
+                        confetes[i] = criarConfete();
+                    }
+                }
+                
+                animationId = requestAnimationFrame(desenhar);
+            }
+
+            function iniciar() {
+                resizeCanvas();
+                for (let i = 0; i < 150; i++) {
+                    confetes.push(criarConfete());
+                }
+                desenhar();
+            }
+
+            function parar() {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+                if (ctx) {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                if (animationId) {
+                    confetes = [];
+                    for (let i = 0; i < 150; i++) {
+                        confetes.push(criarConfete());
+                    }
+                }
+            });
+
+            return { iniciar, parar };
+        }
+
+        const confete = iniciarConfete();
+
+        btnFinalizar.addEventListener('click', () => {
+            if (check1.checked && check2.checked && check3.checked && check4.checked) {
+                parabensMsg.innerHTML = 'PARABÉNS PRA VOCÊ, NESTA DATA QUERIDA<br>VIOLOU A LEI FELCA, AGORA É ZOEIRA NA SUA VIDA!<br><br>ERICK GUSTAVO ALVES DE SOUZA, VOCÊ FOI PEGO NO FLAGRANTE DA ADULTIZAÇÃO E BULLYING LÚDICO.<br>QUE A ORDEM DOS TEMPLÁRIOS TENHA MISERICÓRDIA DA SUA ALMA DIGITAL.';
+                parabensMsg.style.display = 'block';
+                
+                setTimeout(() => {
+                    cinemaArea.style.display = 'block';
+                    confete.iniciar();
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    
+                    setTimeout(() => {
+                        confete.parar();
+                    }, 8000);
+                }, 500);
+            } else {
+                alert('O réu deve aceitar todos os termos antes de cumprir a sentença. A Lei Felca e os Templários não perdoam hereges.');
+            }
+        });
+    </script>
+</body>
+</html>

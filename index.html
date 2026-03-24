@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Digital - Lei Felca nº 15.211/2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1e2a1f;
+            font-family: 'Times New Roman', 'Georgia', serif;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .documento {
+            max-width: 900px;
+            background: #fef5e6;
+            background-image: linear-gradient(to bottom, #fff8ed, #fef0df);
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px #b8a35c inset;
+            padding: 48px 56px;
+            position: relative;
+        }
+
+        .selo {
+            position: absolute;
+            top: 40px;
+            right: 48px;
+            width: 100px;
+            height: 100px;
+            border: 3px double #9b7e3a;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f7ebd0;
+            opacity: 0.9;
+            text-align: center;
+            padding: 12px 4px;
+            box-sizing: border-box;
+        }
+
+        .selo .linha1 {
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .selo .linha2 {
+            font-size: 9px;
+            font-weight: bold;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .selo .linha3 {
+            font-size: 8px;
+            font-weight: bold;
+            color: #9b7e3a;
+            text-transform: uppercase;
+            border-top: 1px solid #b88b4a;
+            padding-top: 4px;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        .brasao {
+            text-align: center;
+            margin-bottom: 28px;
+            border-bottom: 2px solid #c8b27a;
+            padding-bottom: 20px;
+        }
+
+        .brasao h1 {
+            font-size: 22px;
+            letter-spacing: 2px;
+            color: #3e2a1f;
+            font-weight: normal;
+        }
+
+        .brasao p {
+            font-size: 14px;
+            color: #7a5a3a;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            margin: 32px 0 24px;
+        }
+
+        .titulo-principal h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2c1a0c;
+            border-bottom: 1px solid #b59d6e;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .titulo-principal .sub {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #5e3a22;
+        }
+
+        .corpo-texto {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #1e1a14;
+            text-align: justify;
+        }
+
+        .corpo-texto p {
+            margin: 1.2em 0;
+        }
+
+        .destaque-lei {
+            background: #f3efdf;
+            border-left: 4px solid #b37b2e;
+            padding: 12px 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .assinatura-area {
+            margin-top: 48px;
+            text-align: center;
+            border-top: 1px dashed #bbaa82;
+            padding-top: 24px;
+        }
+
+        .btn-proximo {
+            background: none;
+            border: 2px solid #7c5f36;
+            padding: 12px 32px;
+            font-size: 18px;
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            color: #7c5f36;
+            cursor: pointer;
+            transition: 0.2s;
+            background-color: #fff3e2;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-proximo:hover {
+            background: #7c5f36;
+            color: #fef3e2;
+            border-color: #7c5f36;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 11px;
+            color: #ac9a76;
+        }
+
+        @media (max-width: 600px) {
+            .documento {
+                padding: 28px 20px;
+            }
+            .selo {
+                width: 70px;
+                height: 70px;
+                top: 20px;
+                right: 20px;
+                padding: 8px 2px;
+            }
+            .selo .linha1 {
+                font-size: 10px;
+            }
+            .selo .linha2 {
+                font-size: 7px;
+            }
+            .selo .linha3 {
+                font-size: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="documento">
+        <div class="selo">
+            <div class="linha1">TEMPLÁRIOS</div>
+            <div class="linha2">ORDEM DOS</div>
+            <div class="linha3">DEFENSORES DA LEI</div>
+        </div>
+
+        <div class="brasao">
+            <h1>TRIBUNAL DIGITAL DA SANTA INFÂNCIA</h1>
+            <p>Sob a égide da Lei Felca • Custódia da Ordem dos Templários</p>
+        </div>
+
+        <div class="titulo-principal">
+            <h2>COMUNICADO OFICIAL</h2>
+            <div class="sub">Processo n° 2026.00012-ERICK/FC</div>
+        </div>
+
+        <div class="corpo-texto">
+            <p>Ilmo(a). Sr(a). <strong>ERICK GUSTAVO ALVES DE SOUZA</strong>, CPF indicado nos autos, residente digitalmente neste domínio.</p>
+            
+            <p>A <strong>Lei Felca (Lei nº 15.211/2025)</strong>, também conhecida como Estatuto Digital da Criança e do Adolescente, em vigor desde março de 2026, estabelece diretrizes rigorosas para coibir a <strong>adultização precoce</strong> e garantir a segurança de menores no ambiente digital. Após varredura algorítmica conduzida por este tribunal em conjunto com a <strong>Ordem dos Templários</strong>, foram identificadas condutas irregulares associadas ao seu CPF digital.</p>
+            
+            <div class="destaque-lei">
+                <strong>Fundamento Legal:</strong> Art. 4º, inc. III da Lei Felca — "É vedada a tentativa de envelhecimento artificial sem autorização do responsável legal, incluindo celebração não autorizada de aniversário com efeitos de maioridade simbólica."
+            </div>
+
+            <p>Diante dos fatos, este órgão instaurou procedimento administrativo para apurar responsabilidades. Conforme o art. 27 do referido diploma, plataformas e <strong>cidadãos flagrados em adultização midiática</strong> ficam sujeitos a medidas educativas, multas e constrangimentos restaurativos.</p>
+        </div>
+
+        <div class="assinatura-area">
+            <a href="intimacao.html" class="btn-proximo">ACESSAR INTIMAÇÃO COMPLETA</a>
+        </div>
+        <footer>Documento assinado digitalmente por Juiz Diogo da Ordem dos Templários • Notários Emanuel e Pedro</footer>
+    </div>
+</body>
+</html>
